@@ -18,8 +18,9 @@ git submodule update --init --recursive
 cd compose-mm/support && git checkout compose-native-main-stale-2021-11-08
 cd ..
 ```
-- Then, we can reproduce the issue.
+- Then, we can try to reproduce the issue.
 
 ```shell
 ./gradlew :shared:linkDebugFrameworkIos
 ```
+- Also, you can build the iosApp in Xcode and run on simulator or iphone.
