@@ -1,7 +1,5 @@
 object Version {
-    // const val kotlin = "1.6.20-dev-5891"
     const val kotlin = "1.5.31"
-    // const val kotlin = "1.6.10"
 
     /**
      * The "native-mt" version of kotlin coroutine can use multi-threading in kotlin-native.
@@ -11,8 +9,8 @@ object Version {
 }
 
 object JetpackSourceSets {
-    private const val base = "../compose-mm/support"
-    private const val compose = "$base/compose"
+    const val base = "../compose-mm/support"
+    const val compose = "$base/compose"
     private const val commonSrc = "commonMain/kotlin"
     private const val androidSrc = "androidMain/kotlin"
     private const val jvmSrc = "jvmMain/kotlin"
