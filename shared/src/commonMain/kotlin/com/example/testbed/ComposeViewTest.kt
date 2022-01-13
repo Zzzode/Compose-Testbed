@@ -6,4 +6,3 @@ expect class ComposeViewTest {
     @Composable
     fun dolphinCompose(): String
 }
-
