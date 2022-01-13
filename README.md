@@ -15,12 +15,11 @@ git submodule update --init --recursive
 -  Next, we need to checkout a compose-native branch for JetBrains' Androidx.
 
 ```shell
-cd compose-mm/support && git checkout compose-native-main-stale-2021-11-08
+cd support && git checkout compose-native-main-stale-2021-11-08
 cd ..
 ```
 - Then, we can try to reproduce the issue.
 
 ```shell
-./gradlew :shared:linkDebugFrameworkIos
+./gradlew :shared:linkDebugFrameworkIosArm64
 ```
-- Also, you can build the iosApp in Xcode and run on simulator or iphone.

@@ -7,7 +7,6 @@ pluginManagement {
 }
 
 rootProject.name = "Testbed"
-include(":androidApp")
 include(":shared")
 include(":compiler-hosted")
 include(":runtime")
