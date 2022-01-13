@@ -9,7 +9,7 @@ object Version {
 }
 
 object JetpackSourceSets {
-    const val base = "../compose-mm/support"
+    const val base = "../support"
     const val compose = "$base/compose"
     private const val commonSrc = "commonMain/kotlin"
     private const val androidSrc = "androidMain/kotlin"
@@ -41,7 +41,6 @@ object Dependencies {
     const val stdlibCommon = "org.jetbrains.kotlin:kotlin-stdlib-common:${Version.kotlin}"
     const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Version.kotlin}"
     const val kotlinCompiler = "org.jetbrains.kotlin:kotlin-compiler:${Version.kotlin}"
-    const val composeCompiler = "androidx.compose.compiler:compiler:1.1.0-beta04"
     const val kotlinxCoroutinesCore =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinxCoroutines}"
     const val kotlinxCoroutinesAndroid =
