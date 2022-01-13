@@ -4,8 +4,8 @@ plugins {
 
 sourceSets {
     main {
-        java.srcDir("compose-mm/support/compose/compiler/compiler-hosted/src/main/java")
-        resources.srcDir("compose-mm/support/compose/compiler/compiler-hosted/src/main/resources")
+        java.srcDir("${JetpackSourceSets.compose}/compiler/compiler-hosted/src/main/java")
+        resources.srcDir("${JetpackSourceSets.compose}/compiler/compiler-hosted/src/main/resources")
     }
 }
 
