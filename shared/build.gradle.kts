@@ -2,8 +2,6 @@ plugins {
     kotlin("multiplatform")
 }
 
-version = "1.0"
-
 kotlin {
     listOf(
         iosX64(),

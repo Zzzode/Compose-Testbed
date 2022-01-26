@@ -3,8 +3,6 @@ plugins {
     id("com.android.library")
 }
 
-version = "1.0"
-
 val runtimeDir = "runtime/runtime/src"
 
 kotlin {
