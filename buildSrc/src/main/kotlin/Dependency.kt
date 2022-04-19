@@ -1,11 +1,11 @@
 object Version {
-    const val kotlin = "1.5.31"
+    const val kotlin = "1.6.20"
 
     /**
      * The "native-mt" version of kotlin coroutine can use multi-threading in kotlin-native.
      * see detail in https://kotlinlang.org/docs/kmm-concurrency-and-coroutines.html#multithreaded-coroutines.
      */
-    const val kotlinxCoroutines = "1.5.2-native-mt"
+    const val kotlinxCoroutines = "1.6.1-native-mt"
 }
 
 object JetpackSourceSets {
@@ -41,9 +41,10 @@ object Dependencies {
     const val stdlibCommon = "org.jetbrains.kotlin:kotlin-stdlib-common:${Version.kotlin}"
     const val stdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Version.kotlin}"
     const val kotlinCompiler = "org.jetbrains.kotlin:kotlin-compiler:${Version.kotlin}"
+    const val composeCompiler = "androidx.compose.compiler:compiler:1.1.1"
     const val kotlinxCoroutinesCore =
         "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Version.kotlinxCoroutines}"
     const val kotlinxCoroutinesAndroid =
         "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Version.kotlinxCoroutines}"
-    const val androidxAnnotation = "androidx.annotation:annotation:1.2.0"
+    const val androidxAnnotation = "androidx.annotation:annotation:1.3.0"
 }

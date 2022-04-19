@@ -14,6 +14,15 @@ kotlin {
             baseName = "shared"
             isStatic = false
         }
+
+        it.compilations.all {
+            kotlinOptions {
+                freeCompilerArgs = freeCompilerArgs + listOf(
+                    "-P",
+                    "plugin:androidx.compose.compiler.plugins.kotlin:generateDecoys=true",
+                )
+            }
+        }
     }
 
     sourceSets {

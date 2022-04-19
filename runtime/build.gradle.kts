@@ -11,7 +11,20 @@ kotlin {
     listOf(
         iosX64(),
         iosArm64(),
-    )
+    ).forEach {
+        it.binaries.staticLib {
+            baseName = "runtime"
+        }
+
+        it.compilations.all {
+            kotlinOptions {
+                freeCompilerArgs = freeCompilerArgs + listOf(
+                    "-P",
+                    "plugin:androidx.compose.compiler.plugins.kotlin:generateDecoys=true",
+                )
+            }
+        }
+    }
 
     sourceSets {
         val commonMain by getting {
@@ -35,6 +48,10 @@ dependencies {
     add(
         org.jetbrains.kotlin.gradle.plugin.NATIVE_COMPILER_PLUGIN_CLASSPATH_CONFIGURATION_NAME,
         project(":compiler-hosted")
+    )
+    add(
+        org.jetbrains.kotlin.gradle.plugin.PLUGIN_CLASSPATH_CONFIGURATION_NAME,
+        Dependencies.composeCompiler
     )
 }
 

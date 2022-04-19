@@ -82,7 +82,7 @@ actual class AtomicReference<V> actual constructor(value: V) {
     }
 }
 
-actual class AtomicInt actual constructor(value: Int) {
+internal actual class AtomicInt actual constructor(value: Int) {
     private val delegate = kotlin.native.concurrent.AtomicInt(value)
     actual fun get(): Int = delegate.value
     actual fun set(value: Int) {
@@ -99,8 +99,6 @@ internal actual fun identityHashCode(instance: Any?): Int =
     instance.identityHashCode()
 
 actual annotation class TestOnly
-
-actual typealias CompositionContextLocal = kotlin.native.concurrent.ThreadLocal
 
 actual inline fun <R> synchronized(lock: Any, block: () -> R): R =
     block()
